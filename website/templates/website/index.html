@@ -1,0 +1,36 @@
+<html>
+  <head>
+    <style>
+      table, th, td {
+	  border: 1px solid black;
+      }
+    </style>
+    <title>Hotspot Application</title>
+  </head>
+  <body bgcolor=white>
+
+    <h1>Hotspot</h1>
+
+    {% if latest_sample_data %}
+
+    <table>
+      <tr>
+	<th>Name</th>
+	<th>Rating</th>
+      </tr>
+
+      {% for sample in latest_sample_data %}
+      <tr>
+	<td>{{ sample.restaurant_name }}</td>
+	<td>{{ sample.rating }}</td>
+      </tr>
+	
+      {% endfor %}
+    </table>
+      
+    {% else %}
+    <p>No sample data is available.</p>
+    {% endif %}
+    
+  </body>
+</html>
