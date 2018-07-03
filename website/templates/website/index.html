@@ -11,25 +11,25 @@
 
     <h1>Hotspot</h1>
 
-    {% if latest_sample_data %}
+    {% if latest_rest_data %}
 
     <table>
       <tr>
 	<th>Name</th>
-	<th>Rating</th>
+	<th>Address</th>
       </tr>
 
-      {% for sample in latest_sample_data %}
+      {% for rest in latest_rest_data %}
       <tr>
-	<td>{{ sample.restaurant_name }}</td>
-	<td>{{ sample.rating }}</td>
+	<td>{{ rest.name }}</td>
+	<td>{{ rest.address }}</td>
       </tr>
 	
       {% endfor %}
     </table>
       
     {% else %}
-    <p>No sample data is available.</p>
+    <p>No restaurant data is available.</p>
     {% endif %}
     
   </body>

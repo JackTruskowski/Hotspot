@@ -10,4 +10,10 @@ class Sample(models.Model):
     restaurant_name = models.CharField(max_length=200)
     rating = models.FloatField()
 
+class RestaurantNaive(models.Model):
+    rest_id = models.IntegerField()
+    name = models.CharField(max_length=100)
+    address = models.CharField(max_length=200)
+    
+    
 #TODO: Production models
